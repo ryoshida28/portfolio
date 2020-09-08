@@ -1,0 +1,49 @@
+.problem-lead .media {
+    margin: 5px 0;
+    padding: 2rem;
+    border-radius: 1em;
+    background-color: #2C3E50;
+}
+
+.problem-lead {
+    font-weight: bold;
+    color: #fff;
+}
+
+.problem-lead .media:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #343a40;
+    cursor: pointer;
+}
+
+.problem-lead .tag:hover {
+    color: #fff;
+    background-color: #c50c62;
+}
+
+.tag {
+    margin: 0 5px;
+
+    color: #fff;
+    background-color: #e83e8c;
+}
+
+.text {
+    font-size: 14px;
+    font-weight: normal;
+    z-index: 1;
+}
+
+.problem-link {
+    margin: 0 5px;
+}
+
+.text a {
+    color: #e83e8c;
+    font-weight: normal;
+}
+
+.text a:hover {
+    color: #c50c62;
+}
