@@ -16,20 +16,13 @@ import './sass/main.scss';
 
 function App() {
   return (
-    <React.Fragment>
-      {/* Header */}
-      {/* Navbar */}
-
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
+        <Route exact path="/" component={Home} />
         <Route path="/competitive_programming" component={ProblemBrowse}/>
         <Route path="/competitive_programming/view/:id" component={ProblemView} />
         <Route path="/projects" component={ProjectsBrowse} />
         <Route path="/resume" component={Resume} />
       </Switch>
-    </React.Fragment>
   );
 }
 
