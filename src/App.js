@@ -22,6 +22,7 @@ function App() {
         <Route path="/competitive_programming/view/:id" component={ProblemView} />
         <Route path="/projects" component={ProjectsBrowse} />
         <Route path="/resume" component={Resume} />
+        <Route path="*" component={Home} />
       </Switch>
   );
 }
