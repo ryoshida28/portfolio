@@ -6,7 +6,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Router forceRefresh={true} basename={process.env.PUBLIC_URL}>
+  <Router forceRefresh={false} basename={process.env.PUBLIC_URL}>
     {/* <React.StrictMode> */}
       <App />
     {/* </React.StrictMode> */}
