@@ -16,7 +16,7 @@ import './sass/main.scss';
 
 function App() {
   return (
-    <Router>
+    <React.Fragment>
       {/* Header */}
       {/* Navbar */}
 
@@ -40,8 +40,7 @@ function App() {
           404
         </Route>
       </Switch>
-
-    </Router>
+    </React.Fragment>
   );
 }
 
