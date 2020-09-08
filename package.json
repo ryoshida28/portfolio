@@ -24,8 +24,9 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
+    "cp-404": "cp 404.html build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && npm run cp-404",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
