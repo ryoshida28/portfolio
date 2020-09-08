@@ -7,9 +7,9 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <Router forceRefresh={true} basename={process.env.PUBLIC_URL}>
-    <React.StrictMode>
+    {/* <React.StrictMode> */}
       <App />
-    </React.StrictMode>
+    {/* </React.StrictMode> */}
   </Router>,
   document.getElementById('root')
 );
