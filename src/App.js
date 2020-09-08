@@ -24,16 +24,16 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/competitive_programming">
+        <Route path="/competitive_programming">
           <ProblemBrowse />
         </Route>
-        <Route exact path="/competitive_programming/view/:id">
+        <Route path="/competitive_programming/view/:id">
           <ProblemView />
         </Route>
-        <Route exact path="/projects">
+        <Route path="/projects">
           <ProjectsBrowse />
         </Route>
-        <Route exact path="/resume">
+        <Route path="/resume">
           <Resume />
         </Route>
         <Route path="*">
