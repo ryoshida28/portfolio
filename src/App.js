@@ -24,21 +24,10 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/competitive_programming">
-          <ProblemBrowse />
-        </Route>
-        <Route path="/competitive_programming/view/:id">
-          <ProblemView />
-        </Route>
-        <Route path="/projects">
-          <ProjectsBrowse />
-        </Route>
-        <Route path="/resume">
-          <Resume />
-        </Route>
-        <Route path="*">
-          404
-        </Route>
+        <Route path="/competitive_programming" component={ProblemBrowse}/>
+        <Route path="/competitive_programming/view/:id" component={ProblemView} />
+        <Route path="/projects" component={ProjectsBrowse} />
+        <Route path="/resume" component={Resume} />
       </Switch>
     </React.Fragment>
   );
