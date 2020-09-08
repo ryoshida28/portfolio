@@ -18,7 +18,7 @@ function App() {
   return (
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/competitive_programming" component={ProblemBrowse}/>
+        <Route exact path="/competitive_programming" component={ProblemBrowse}/>
         <Route path="/competitive_programming/view/:id" component={ProblemView} />
         <Route path="/projects" component={ProjectsBrowse} />
         <Route path="/resume" component={Resume} />
