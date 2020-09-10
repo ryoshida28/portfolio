@@ -9,7 +9,7 @@ export default class ListProblem extends Component {
     constructor(props) {
         super(props);
 
-        let { problem } = this.props;
+        let { problem } = props;
 
         this.state = { 
             problem: problem,
@@ -17,7 +17,9 @@ export default class ListProblem extends Component {
             redirect_to: undefined
         };
 
+
         this.redirectToSummary = this.redirectToSummary.bind(this);
+        this.overrideRedirect = this.overrideRedirect.bind(this);
     }
 
     redirectToSummary(link) {
@@ -25,6 +27,14 @@ export default class ListProblem extends Component {
             redirect: true,
             redirect_to: link
         });
+    }
+
+    overrideRedirect() {
+        this.redirectFlag = true;
+        this.setState({
+            redirect: false,
+            redirect_to: undefined
+        })
     }
 
     render() {
@@ -44,9 +54,13 @@ export default class ListProblem extends Component {
                             <h5 className="mt-0">{this.state.problem.name}</h5>
                             {
                                 this.state.problem.tags.map(x => {
+                                    const linkTo = {
+                                        pathname: '/redirect',
+                                        search: `?to=/competitive_programming&filter=${x}`,
+                                    }
                                     return (
-                                        <Link to={`/${x}`} key={x}>
-                                            <Badge className="tag" pill>{x}</Badge>
+                                        <Link className="tag-link" to={linkTo} onClick={e=>this.overrideRedirect()} key={x}>
+                                            <Badge className={`tag tag-${this.state.problem.id}`} pill>{x}</Badge>
                                         </Link>
                                     );
                                 })

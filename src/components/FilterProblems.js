@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-import { Jumbotron, Container, Dropdown, Row, Col } from 'react-bootstrap';
+import { Jumbotron, Container, Dropdown, Row, Col, Button } from 'react-bootstrap';
 
 // import '../css/FilterProblems.css';
 
@@ -84,9 +84,10 @@ function FilterProblems(props) {
                     </Container>
 
 
-                    <Container className="mx-5">
-                        <Row>
+                    <Container>
+                        <Row className="justify-content-center">
                             { dropdowns }
+                            <Button variant="secondary" onClick={e => {props.clear();props.update();}}>Reset</Button>
                         </Row>
                    </Container>
                 </Container>

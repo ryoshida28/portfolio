@@ -9,6 +9,7 @@ import ProblemBrowse from './routes/ProblemBrowse';
 import ProblemView from './routes/ProblemView';
 import ProjectsBrowse from './routes/ProjectsBrowse';
 import Resume from './routes/Resume';
+import Forward from './routes/Forward';
 
 
 import './sass/main.scss';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/competitive_programming/view/:id" component={ProblemView} />
         <Route path="/projects" component={ProjectsBrowse} />
         <Route path="/resume" component={Resume} />
+        <Route path="/redirect" component={Forward} />
         <Route component={Home} />
       </Switch>
   );

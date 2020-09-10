@@ -23,10 +23,12 @@
 }
 
 .tag {
+    position: relative;
     margin: 0 5px;
 
     color: #fff;
     background-color: #e83e8c;
+    z-index: 1;
 }
 
 .text {
@@ -36,6 +38,8 @@
 }
 
 .problem-link {
+    position: relative;
+    z-index: 0;
     margin: 0 5px;
 }
 

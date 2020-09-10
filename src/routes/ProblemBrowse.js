@@ -12,7 +12,8 @@ export default class ProblemBrowse extends Component {
 
         this.state = {
             filters: new Set(),
-            sort_by: undefined
+            sort_by: undefined,
+            overrideRedirect: false
         }
 
         this.filter_pred = this.filter_pred.bind(this);
@@ -20,6 +21,23 @@ export default class ProblemBrowse extends Component {
         this.remove_filter = this.remove_filter.bind(this);
         this.clear_filters = this.clear_filters.bind(this);
         this.update_filters = this.update_filters.bind(this);
+        this.parseQuery = this.parseQuery.bind(this);
+
+        this.parseQuery();
+    }
+
+    parseQuery() {
+        if (this.props.location.search !== '') {
+            const params = this.props.location.search.slice(1).split('&');
+            params.forEach( kv => {
+                const [key, val] = kv.split('=');
+                if (key === 'filter') {
+                    this.state.filters.add(val);
+                } else {
+                    this.state.filters.clear();
+                }
+            })
+        }
     }
 
     add_filter(filter) {
@@ -54,6 +72,13 @@ export default class ProblemBrowse extends Component {
         count += (this.state.filters.has(problem.language) ? 1 : 0);
 
         return count === this.state.filters.size;
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.location.search !== prevProps.location.search) {
+            this.parseQuery();
+            this.forceUpdate();
+        }
     }
 
     render() {
