@@ -3,12 +3,12 @@
 }
 
 .pd {
-    margin: 0px 20%;
-    padding: 10px 10%;
+    margin: 100px 20%;
+    padding: 30px 10%;
+    border-radius: 20px;
 
     height: inherit;
-
-    background-color: #fff;
+    background-color: rgba($color: #fff, $alpha: 0.75);
 }
 
 .pd h1 {

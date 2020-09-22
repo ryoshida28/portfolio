@@ -7,9 +7,10 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
-import SmartTune from './projects/SmartTune/SmartTune'
-import BargainSwipes from './projects/BargainSwipes/BargainSwipes'
-import AdobeAllHands from './projects/AdobeAllHands/AdobeAllHands'
+import SmartTune from './projects/SmartTune/SmartTune';
+import BargainSwipes from './projects/BargainSwipes/BargainSwipes';
+import AdobeAllHands from './projects/AdobeAllHands/AdobeAllHands';
+import SwiftLaunch from './projects/SwiftLaunch/SwiftLaunch';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -97,6 +98,7 @@ export default function NavTabs() {
           <LinkTab label="Smart Tune" href="/smart-tune" {...a11yProps(0)} />
           <LinkTab label="Bargain Swipes" href="/bargain-swipes" {...a11yProps(1)} />
           <LinkTab label="Adobe All Hands" href="/adobe-all-hands" {...a11yProps(2)} />
+          <LinkTab label="Swift Launch" href="/swift-launch" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <TabPanel className={classes.panel} value={value} index={0}>
@@ -107,6 +109,9 @@ export default function NavTabs() {
       </TabPanel>
       <TabPanel className={classes.panel} value={value} index={2}>
         <AdobeAllHands />
+      </TabPanel>
+      <TabPanel className={classes.panel} value={value} index={3}>
+        <SwiftLaunch />
       </TabPanel>
     </div>
   );

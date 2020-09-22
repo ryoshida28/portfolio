@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Jumbotron, Container, Dropdown, Row, Col, Button } from 'react-bootstrap';
 
-// import '../css/FilterProblems.css';
+import '../sass/components/filter_problem.scss';
 
 
 function CustomDropDown(props) {
@@ -76,7 +76,7 @@ function FilterProblems(props) {
 
     return (
         <div className="filter-wrapper">
-            <Jumbotron fluid>
+            <Jumbotron fluid className="filter-jumbotron px-3">
                 <Container>
                     <h1>Competitive Programming Portfolio</h1>
                     <Container>
