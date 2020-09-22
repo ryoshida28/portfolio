@@ -5,6 +5,7 @@ import resumePDF from '../doc/resume.pdf';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import { Container } from 'react-bootstrap';
+import '../sass/routes/resume.scss';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`; 
 
 export default class Resume extends Component {
@@ -37,10 +38,12 @@ export default class Resume extends Component {
         return (
             <div>
                <Container>
-                    <div id="pdf-container">
-                       <Document file={resumePDF} onLoadSuccess={this.onPDFLoad} renderMode="svg">
-                           <Page pageNumber={this.state.curr_page} scale={1.5} />
-                       </Document>
+                    <div id="pdf-container" className="justify-content-center">
+                        <div className="pdf-wrapper m-auto">
+                            <Document file={resumePDF} onLoadSuccess={this.onPDFLoad} renderMode="svg">
+                                <Page pageNumber={this.state.curr_page} scale={2.0} />
+                            </Document>
+                        </div>
                     </div>
                 </Container>
             </div>

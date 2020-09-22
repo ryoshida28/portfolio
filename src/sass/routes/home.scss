@@ -1,0 +1,63 @@
+
+
+.hero-banner {
+    margin-top: 5%;
+    background-color: rgba($color: #cccccc, $alpha: 0.8);
+}
+
+.hero-wrapper {
+    padding: 75px 20% 125px 20%;
+}
+
+.img {
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #343a40;
+
+    box-shadow: #666 0px 5px 25px;
+}
+
+.banner-link {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 30px 40px;
+    background-color: #343a40;
+    color: #eeeeee;
+    border-radius: 15px;
+    box-shadow: #666 0px 0px 25px;
+    transition: top 0.1s,left 0.1s, box-shadow 0.1s;
+}
+
+.banner-a:hover {
+    text-decoration: none;
+}
+.banner-link:hover {
+    position: relative;
+    top: -3px;
+    left: -3px;
+    text-decoration: none;
+    background-color: darken($color: #343a40, $amount: 3.0);
+    box-shadow: #333 0px 0px 25px;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 1.9vw;
+}
+
+.banner-text-link {
+    color: #666;
+}
+
+.banner-text-link:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .social-links {
+        font-size: 30px;
+    }
+}
