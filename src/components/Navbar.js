@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Navbar as BootNavbar, Nav, Container } from 'react-bootstrap';
+import { Navbar as BootNavbar, Nav } from 'react-bootstrap';
 
 import '../sass/components/navbar.scss';
 
